@@ -13,8 +13,9 @@ type IVerticalFeatureRowProps = {
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   const verticalFeatureClass = className(
-    "mt-10",
+    "mt-5",
     "flex",
+    "justify-between",
     "flex-wrap",
     "items-center",
     {
@@ -32,7 +33,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <div className="mt-6 text-md leading-2">{props.description}</div>
       </div>
 
-      <div className="w-full sm:w-1/2 p-6">
+      <div className="flex justify-end w-full sm:w-1/2 p-6">
         <Image
           width="200"
           height="200"

@@ -1,4 +1,5 @@
 import className from "classnames";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 type IVerticalFeatureRowProps = {
@@ -25,14 +26,19 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   return (
     <div className={verticalFeatureClass}>
-      <div className="w-full sm:w-1/2 text-center sm:px-6">
-        <h3 className="text-3xl text-gray-900 font-semibold">{props.title}</h3>
+      <div className="w-full sm:w-1/2 text-left sm:px-6">
+        <h3 className="text-4xl text-gray-900 font-bold">{props.title}</h3>
         <h5 className="text-xl">{props.subtitle}</h5>
-        <div className="mt-6 text-xl leading-9">{props.description}</div>
+        <div className="mt-6 text-md leading-2">{props.description}</div>
       </div>
 
       <div className="w-full sm:w-1/2 p-6">
-        <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        <Image
+          width="200"
+          height="200"
+          src={`${router.basePath}${props.image}`}
+          alt={props.imageAlt}
+        />
       </div>
     </div>
   );

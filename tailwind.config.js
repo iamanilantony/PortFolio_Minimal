@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  plugins: [require("daisyui")],
   theme: {
     fontSize: {
       xs: "0.75rem",
@@ -43,5 +44,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  // plugins: [],
 };

@@ -3,16 +3,19 @@ import React from "react";
 const NavBar = () => (
   <div className="navbar bg-base-100">
     <div className="flex-1">
-      <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+      <a className="btn btn-ghost normal-case text-xl">Home</a>
     </div>
     <div className="flex-none">
       <ul className="menu menu-horizontal px-1">
         <li>
-          <a>Item 1</a>
+          <a>Projects</a>
+        </li>
+        <li>
+          <a>Resume</a>
         </li>
         <li tabIndex={0}>
           <a>
-            Parent
+            Social
             <svg
               className="fill-current"
               xmlns="http://www.w3.org/2000/svg"
@@ -25,15 +28,12 @@ const NavBar = () => (
           </a>
           <ul className="p-2 bg-base-100">
             <li>
-              <a>Submenu 1</a>
+              <a>Github</a>
             </li>
             <li>
-              <a>Submenu 2</a>
+              <a>LinkedIn</a>
             </li>
           </ul>
-        </li>
-        <li>
-          <a>Item 3</a>
         </li>
       </ul>
     </div>

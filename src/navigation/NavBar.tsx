@@ -35,6 +35,11 @@ const NavBar = () => (
             </li>
           </ul>
         </li>
+        <li>
+          <a>
+            <input type="checkbox" className="toggle" />
+          </a>
+        </li>
       </ul>
     </div>
   </div>

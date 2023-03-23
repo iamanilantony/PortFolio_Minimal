@@ -4,7 +4,7 @@ import NavBar from "../navigation/NavBar";
 import { VerticalFeatures } from "./VerticalFeatures";
 
 const Hero = () => (
-  <Background color="bg-gray-100">
+  <Background color="bg-gray-100 dark:bg-gray-800 dark:text-white">
     <Section yPadding="py-6">
       <NavBar />
     </Section>

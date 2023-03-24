@@ -2,15 +2,21 @@ import className from "classnames";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import { Timer } from "timer-node";
 
 type IVerticalFeatureRowProps = {
-  title: string;
+  title?: string;
   subtitle?: string;
-  description: string;
+  description?: string;
   image?: string;
   imageAlt: string;
   reverse?: boolean;
   links?: boolean;
+  icons?: string;
+  smallTitle?: boolean;
+  padding?: boolean;
+  count?: boolean;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -24,17 +30,56 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     }
   );
 
+  const verticalTitleClass = className("text-gray-900", "font-bold", {
+    "text-xl": props.smallTitle,
+    "text-5xl": !props.smallTitle,
+  });
+
   const router = useRouter();
+
+  const timer = new Timer({
+    label: "test-timer",
+    startTimestamp: 1653024001233, // 2019-07-14 03:13:21.233Z
+  });
+
+  console.log(timer.time()); // { d: 619, h: 16, m: 26, s: 11, ms: 207 }
+  let value = timer.time().d;
+  const YEAR = 365,
+    MONTH = 30,
+    WEEK = 7;
+  let year, months, week, days;
+
+  year = value >= YEAR ? Math.floor(value / YEAR) : 0;
+  value = year ? value - year * YEAR : value;
+
+  months = value >= MONTH ? Math.floor((value % YEAR) / MONTH) : 0;
+  value = months ? value - months * MONTH : value;
+
+  week = value >= WEEK ? Math.floor((value % YEAR) / WEEK) : 0;
+  value = week ? value - week * WEEK : value;
+
+  days = value < WEEK ? Math.floor((value % YEAR) % WEEK) : 0;
+
+  console.log(`years=${year},months=${months},weeks=${week},days=${days}`);
+  const date = `${year} years ${months} months ${week} weeks ${days} days`;
 
   return (
     <div className={verticalFeatureClass}>
       <div className="w-full sm:w-1/2 text-left sm:px-2 flex-[2_2_0%]">
-        <h3 className="text-5xl text-gray-900 font-bold">{props.title}</h3>
+        <h3 className={verticalTitleClass}>{props.title}</h3>
         <h5
           className="text-lg font-normal text-gray-800"
           style={{ marginTop: "-4px" }}
         >
           {props.subtitle}
+          {props.count && (
+            <div className="text-sm leading-1 flex items-center">
+              <div className="pr-1">
+                <BsFillBriefcaseFill />
+              </div>
+              <p>{date}</p>
+            </div>
+          )}
         </h5>
         <div className="mt-6 text-md leading-1">{props.description}</div>
       </div>
@@ -54,27 +99,31 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 };
 
 const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
-  // const verticalFeatureClass = className(
-  //   "flex",
-  //   "w-52",
-  //   "h-64",
-  //   "mx-auto",
-  //   // "mt-10",
-  //   "bg-gradient-to-r",
-  //   "p-[6px]",
-  //   "from-[#6EE7B7]",
-  //   "via-[#3B82F6]",
-  //   "to-[#9333EA]",
-  //   {
-  //     "flex-row-reverse": props.reverse,
-  //   }
-  // );
+  const padding = className({
+    "pl-2": props.padding,
+  });
 
   // const router = useRouter();
   return (
     <div className="card w-56 glass text-gray-800">
       <div className="card-body">
-        <h2 className="card-title">{props.title}</h2>
+        <div className="flex">
+          {props.image && (
+            <Image
+              src={props.image}
+              width="40px"
+              height="30px"
+              alt="company"
+              className="m-2"
+            />
+          )}
+          <div className={padding}>
+            <h2 className="card-title">{props.title}</h2>
+            <h5 className="text-md font-normal text-gray-600">
+              {props.subtitle}
+            </h5>
+          </div>
+        </div>
         <p>{props.description}</p>
         {props.links && (
           <div className="flex text-xl">

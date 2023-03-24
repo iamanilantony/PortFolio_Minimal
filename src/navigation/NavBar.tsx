@@ -1,7 +1,7 @@
 import React from "react";
 
 const NavBar = () => (
-  <div className="navbar bg-base-100">
+  <div className="navbar bg-base-800">
     <div className="flex-1">
       <a className="btn btn-ghost normal-case text-xl">Home</a>
     </div>

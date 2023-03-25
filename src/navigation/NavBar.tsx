@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const NavBar = () => (
@@ -28,10 +29,14 @@ const NavBar = () => (
           </a>
           <ul className="p-2 bg-base-100">
             <li>
-              <a>Github</a>
+              <Link href="https://github.com/AnilAntony3134">
+                <a>Github</a>
+              </Link>
             </li>
             <li>
-              <a>LinkedIn</a>
+              <Link href="https://www.linkedin.com/in/iamanilantony/">
+                <a>LinkedIn</a>
+              </Link>
             </li>
           </ul>
         </li>

@@ -25,6 +25,8 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     "justify-between",
     "flex-wrap",
     "items-center",
+    "sm:flex-col",
+    "sm:px-4",
     {
       "flex-row-reverse": props.reverse,
     }
@@ -42,7 +44,6 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     startTimestamp: 1653024001233, // 2019-07-14 03:13:21.233Z
   });
 
-  console.log(timer.time()); // { d: 619, h: 16, m: 26, s: 11, ms: 207 }
   let value = timer.time().d;
   const YEAR = 365,
     MONTH = 30,
@@ -85,7 +86,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       </div>
 
       {props.image && (
-        <div className="flex justify-end w-full sm:w-1/2 p-6 flex-1">
+        <div className="flex justify-end w-full sm:w-1/2 p-6 flex-1 sm: px-4">
           <Image
             width="200"
             height="200"

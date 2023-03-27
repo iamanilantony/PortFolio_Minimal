@@ -7,7 +7,7 @@ const NavBar = () => (
       <a className="btn btn-ghost normal-case text-xl">Home</a>
     </div>
     <div className="flex-none">
-      <ul className="menu menu-horizontal px-1">
+      <ul className="menu menu-horizontal px-1 md:hidden">
         <li>
           <Link as="/projects" href={"/projects"}>
             <a>Projects</a>
@@ -41,11 +41,6 @@ const NavBar = () => (
               </Link>
             </li>
           </ul>
-        </li>
-        <li>
-          <a>
-            <input type="checkbox" className="toggle" />
-          </a>
         </li>
       </ul>
     </div>

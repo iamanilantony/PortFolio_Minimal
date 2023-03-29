@@ -3,13 +3,13 @@ module.exports = {
   plugins: [require("daisyui")],
   darkMode: "class",
   theme: {
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
-    },
+    // screens: {
+    //   sm: "640px",
+    //   md: "768px",
+    //   lg: "1024px",
+    //   xl: "1280px",
+    //   "2xl": "1536px",
+    // },
     fontSize: {
       xs: "0.75rem",
       sm: "0.875rem",

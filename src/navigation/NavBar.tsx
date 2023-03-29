@@ -7,7 +7,7 @@ const NavBar = () => (
       <a className="btn btn-ghost normal-case text-xl">Home</a>
     </div>
     <div className="flex-none">
-      <ul className="menu menu-horizontal px-1 md:hidden">
+      <ul className="menu menu-horizontal px-1 hidden md:flex">
         <li>
           <Link as="/projects" href={"/projects"}>
             <a>Projects</a>

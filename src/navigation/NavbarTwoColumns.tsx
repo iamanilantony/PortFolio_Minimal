@@ -8,7 +8,6 @@ type INavbarProps = {
 };
 
 const NavbarTwoColumns = (props: INavbarProps) => {
-  console.log(props);
   return (
     <div className="flex flex-wrap justify-between items-center">
       <div>

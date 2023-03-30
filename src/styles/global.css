@@ -1,5 +1,21 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+
+html, body {height: 100%; width: 100%;}
+html {
+  @apply h-full;
+  @apply w-full;
+}
+body {
+  @apply h-full;
+  @apply w-full;
+}
+div#__next {
+  @apply h-full;
+  @apply w-full;
+}
+main {
+  @apply h-full;
+  @apply w-full;
+}

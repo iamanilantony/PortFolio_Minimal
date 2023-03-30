@@ -1,5 +1,6 @@
 import className from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { BsFillBriefcaseFill } from "react-icons/bs";
@@ -26,7 +27,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     "flex-wrap",
     "flex-col-reverse",
     "md:flex-row",
-    "sm:px-4",
+    "md:px-0",
     "px-4",
     {
       "flex-row-reverse": props.reverse,
@@ -62,7 +63,6 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   days = value < WEEK ? Math.floor((value % YEAR) % WEEK) : 0;
 
-  console.log(`years=${year},months=${months},weeks=${week},days=${days}`);
   const date = `${year} years ${months} months ${week} weeks ${days} days`;
 
   return (
@@ -73,7 +73,14 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           className="text-lg font-normal text-gray-800"
           style={{ marginTop: "-4px" }}
         >
-          {props.subtitle}
+          {props.subtitle?.includes("Settlin") ? (
+            <>
+              <Link href="https://settlin.in/">{props.subtitle}</Link>
+            </>
+          ) : (
+            props.subtitle
+          )}
+
           {props.count && (
             <div className="text-sm leading-1 flex items-center">
               <div className="pr-1">
@@ -87,7 +94,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       </div>
 
       {props.image && (
-        <div className="flex md:justify-end w-1/2 md:w-2 flex-1 px-4 md:px-0">
+        <div className="flex md:justify-center w-1/2 md:w-1 flex-1 bg-white md:bg-inherit p-2 rounded-full">
           <Image
             width="200%"
             height="200%"
@@ -107,7 +114,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
 
   // const router = useRouter();
   return (
-    <div className="card w-56 glass text-gray-800">
+    <div className="card w-full md:w-56 my-4 md:my-0 glass text-gray-800">
       <div className="card-body">
         <div className="flex">
           {props.image && (

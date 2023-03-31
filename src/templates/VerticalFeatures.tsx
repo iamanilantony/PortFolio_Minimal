@@ -16,7 +16,10 @@ const VerticalFeatures = () => (
       count
     />
     <Section title="Projects">
-      <div className="flex justify-between" style={{ marginTop: "-1rem" }}>
+      <div
+        className="flex justify-between flex-col md:flex-row"
+        style={{ marginTop: "-1rem" }}
+      >
         <VerticalFeatureCard
           title="BizSol"
           description="A Platform for companies and experts to meet for their major issues"
@@ -38,7 +41,10 @@ const VerticalFeatures = () => (
       </div>
     </Section>
     <Section title="Work" icon={<BsFillBriefcaseFill />}>
-      <div className="flex justify-between" style={{ marginTop: "-1rem" }}>
+      <div
+        className="flex justify-between flex-col md:flex-row"
+        style={{ marginTop: "-1rem" }}
+      >
         <VerticalFeatureCard
           title="SDE 1"
           subtitle="Settlin"

@@ -30,6 +30,11 @@ const Logo = (props: ILogoProps) => {
               <a>Twitter</a>
             </Link>
           </li>
+          <li className="mr-2">
+            <Link href="https://twitter.com/iamanilantony">
+              <a>Resume</a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </span>

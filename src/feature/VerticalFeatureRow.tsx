@@ -34,7 +34,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     }
   );
 
-  const verticalTitleClass = className("text-gray-900", "font-bold", {
+  const verticalTitleClass = className("font-bold", {
     "text-xl": props.smallTitle,
     "text-5xl": !props.smallTitle,
   });
@@ -67,10 +67,10 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   return (
     <div className={verticalFeatureClass}>
-      <div className="w-full sm:w-1/2 text-left sm:px-2 flex-[2_2_0%]">
+      <div className="w-full sm:w-1/2 text-left sm:px-2 flex-[2_2_0%] dark:text-white text-black">
         <h3 className={verticalTitleClass}>{props.title}</h3>
         <h5
-          className="text-lg font-normal text-gray-800"
+          className="text-lg font-normal text-gray-800 dark:text-white"
           style={{ marginTop: "-4px" }}
         >
           {props.subtitle?.includes("Settlin") ? (
@@ -90,7 +90,9 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             </div>
           )}
         </h5>
-        <div className="mt-6 text-md leading-1">{props.description}</div>
+        <div className="mt-6 text-md leading-1 dark:text-[#888888] ">
+          {props.description}
+        </div>
       </div>
 
       {props.image && (
@@ -114,7 +116,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
 
   // const router = useRouter();
   return (
-    <div className="card w-full md:w-56 my-4 md:my-0 glass text-gray-800">
+    <div className="card w-full md:w-56 my-4 md:my-0 border-2">
       <div className="card-body">
         <div className="flex">
           {props.image && (

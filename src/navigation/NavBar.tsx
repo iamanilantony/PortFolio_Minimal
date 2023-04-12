@@ -20,7 +20,6 @@ export default function Navbar() {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              {/* <i className="fas fa-bars"></i> */}
               <GiHamburgerMenu />
             </button>
           </div>

@@ -6,7 +6,7 @@ import { Hero } from "./Hero";
 // import { VerticalFeatures } from "./VerticalFeatures";
 
 const Base = () => (
-  <div className="antialiased text-gray-600 ">
+  <div className="dark:bg-['#121212']">
     <Meta title={AppConfig.title} description={AppConfig.description} />
     <Hero />
     <Footer />

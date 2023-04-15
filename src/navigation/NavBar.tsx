@@ -1,9 +1,11 @@
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between py-3 mb-3">
@@ -59,6 +61,24 @@ export default function Navbar() {
                 >
                   <i className="fab fa-pinterest text-lg leading-lg opacity-75"></i>
                   <span className="ml-2">links</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
+                  href="#pablo"
+                >
+                  <i className="fab fa-pinterest text-lg leading-lg opacity-75"></i>
+                  <span className="ml-2">
+                    <input
+                      type="checkbox"
+                      className="toggle"
+                      defaultChecked
+                      onClick={() =>
+                        setTheme(theme === "dark" ? "light" : "dark")
+                      }
+                    />
+                  </span>
                 </a>
               </li>
             </ul>

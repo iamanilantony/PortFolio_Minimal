@@ -35,15 +35,13 @@ export default function Navbar() {
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
-                <Link href="https://drive.google.com/file/d/1viRhQqaLC3VEV0xL9wyMaqy0hrkdEbOW/view?usp=sharing">
-                  <a
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-                    href="#pablo"
-                  >
-                    <i className="fab fa-facebook-square text-lg leading-lg opacity-75"></i>
-                    <span className="ml-2">Resume</span>
-                  </a>
-                </Link>
+                <a
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
+                  href="https://drive.google.com/file/d/1viRhQqaLC3VEV0xL9wyMaqy0hrkdEbOW/view?usp=sharing"
+                >
+                  <i className="fab fa-facebook-square text-lg leading-lg opacity-75"></i>
+                  <span className="ml-2">Resume</span>
+                </a>
               </li>
               <li className="nav-item">
                 <a

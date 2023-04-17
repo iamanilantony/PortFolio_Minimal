@@ -5,7 +5,7 @@ import { VerticalFeatures } from "./VerticalFeatures";
 
 const Hero = () => {
   return (
-    <Background color="bg-gray-100 dark:bg-[#121212] dark:text-white">
+    <Background color="bg-gray-100 dark:bg-[#121212] dark:text-white text-black">
       <>
         <Section yPadding="py-6">
           <NavBar />

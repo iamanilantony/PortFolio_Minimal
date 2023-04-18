@@ -3,7 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
-import { BsFillBriefcaseFill } from "react-icons/bs";
+import {
+  BsFillBriefcaseFill,
+  BsGithub,
+  BsInstagram,
+  BsLinkedin,
+  BsTwitter,
+} from "react-icons/bs";
 import { Timer } from "timer-node";
 
 type IVerticalFeatureRowProps = {
@@ -80,16 +86,31 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           ) : (
             props.subtitle
           )}
-
           {props.count && (
-            <div className="text-sm leading-1 flex items-center">
+            <div className="text-sm leading-1 flex items-center mt-2">
               <div className="pr-1">
                 <BsFillBriefcaseFill />
               </div>
               <p>{date}</p>
             </div>
           )}
+
+          <div className="text-md leading-1 flex items-center mt-4">
+            <div className="pr-4">
+              <BsLinkedin />
+            </div>
+            <div className="pr-4">
+              <BsGithub />
+            </div>
+            <div className="pr-4">
+              <BsTwitter />
+            </div>
+            <div className="pr-4">
+              <BsInstagram />
+            </div>
+          </div>
         </h5>
+
         <div className="mt-6 text-md leading-1 dark:text-[#888888] ">
           {props.description}
         </div>

@@ -33,7 +33,7 @@ const VerticalFeatures = () => (
           links
         />
         <VerticalFeatureCard
-          title="BizSol"
+          title="Coming Soon"
           description="Loading"
           imageAlt="Second feature alt text"
           links
@@ -82,7 +82,7 @@ const VerticalFeatures = () => (
         />
         <VerticalFeatureRow
           smallTitle
-          title="Batch Topper"
+          title="UG Batch Topper"
           subtitle="Top scorer in the college batch"
           // description=" justo erat semper enim, non hendrerit dui odio id enim."
           imageAlt="Second feature alt text"

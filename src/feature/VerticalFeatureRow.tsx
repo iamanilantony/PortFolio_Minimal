@@ -94,7 +94,9 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               <p>{date}</p>
             </div>
           )}
+        </h5>
 
+        {props.count && (
           <div className="text-md leading-1 flex items-center mt-4">
             <div className="pr-4">
               <BsLinkedin />
@@ -109,8 +111,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               <BsInstagram />
             </div>
           </div>
-        </h5>
-
+        )}
         <div className="mt-6 text-md leading-1 dark:text-[#888888] ">
           {props.description}
         </div>

@@ -27,14 +27,14 @@ const VerticalFeatures = () => (
           links
         />
         <VerticalFeatureCard
-          title="BizSol"
-          description=" justo erat semper enim, non hendrerit dui odio id enim."
+          title="Coming Soon"
+          description="Loading"
           imageAlt="Second feature alt text"
           links
         />
         <VerticalFeatureCard
           title="BizSol"
-          description=" justo erat semper enim, non hendrerit dui odio id enim."
+          description="Loading"
           imageAlt="Second feature alt text"
           links
         />
@@ -81,17 +81,9 @@ const VerticalFeatures = () => (
           links
         />
         <VerticalFeatureRow
-          title="BizSol"
           smallTitle
-          subtitle="Scaling at Settlin"
-          // description=" justo erat semper enim, non hendrerit dui odio id enim."
-          imageAlt="Second feature alt text"
-          links
-        />
-        <VerticalFeatureRow
-          title="BizSol"
-          smallTitle
-          subtitle="Scaling at Settlin"
+          title="Batch Topper"
+          subtitle="Top scorer in the college batch"
           // description=" justo erat semper enim, non hendrerit dui odio id enim."
           imageAlt="Second feature alt text"
           links

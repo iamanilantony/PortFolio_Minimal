@@ -98,23 +98,26 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
         {props.count && (
           <div className="text-md leading-1 flex items-center mt-4">
-            <div className="pr-4">
-              <Link href="https://linkedin.com/iamanilantony">
+            <div className="pr-4 cursor-pointer">
+              <Link
+                href="https://www.linkedin.com/in/iamanilantony/"
+                target="_blank"
+              >
                 <BsLinkedin />
               </Link>
             </div>
-            <div className="pr-4">
-              <Link href="https://github.com/iamanilantony">
+            <div className="pr-4 cursor-pointer">
+              <Link href="https://github.com/iamanilantony " target="_blank">
                 <BsGithub />
               </Link>
             </div>
-            <div className="pr-4">
-              <Link href="https://twitter.com/iamanilantony">
+            <div className="pr-4 cursor-pointer">
+              <Link href="https://twitter.com/iamanilantony" target="_blank">
                 <BsTwitter />
               </Link>
             </div>
-            <div className="pr-4">
-              <Link href="https://incstagram.com/iamanilantony">
+            <div className="pr-4 cursor-pointer">
+              <Link href="https://instagram.com/iamanilantony" target="_blank">
                 <BsInstagram />
               </Link>
             </div>

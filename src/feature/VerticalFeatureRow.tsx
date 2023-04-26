@@ -24,6 +24,7 @@ type IVerticalFeatureRowProps = {
   smallTitle?: boolean;
   padding?: boolean;
   count?: boolean;
+  points?: string[];
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -168,15 +169,35 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
             </h5>
           </div>
         </div>
-        <p>{props.description}</p>
+        <p className="text-sm">{props.description}</p>
         {props.links && (
           <div className="flex text-xl">
-            <div className="pr-2">
-              <AiFillGithub />
-            </div>
-            <div>
-              <AiOutlineLink />
-            </div>
+            <label htmlFor="my-modal-4" className="btn btn-xs mt-2">
+              Read more
+            </label>
+            <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+            <label htmlFor="my-modal-4" className="modal cursor-pointer">
+              <label className="modal-box relative" htmlFor="">
+                <h2 className="card-title">{props.title}</h2>
+                {/* <p className="text-sm my-2">{props.description}</p> */}
+                <ul className="list-disc">
+                  {props.points?.length &&
+                    props.points.map((e, key) => (
+                      <li key={key} className="text-xs my-2">
+                        {e}
+                      </li>
+                    ))}
+                </ul>
+                <div className="flex text-xl mt-4">
+                  <div className="pr-2">
+                    <AiFillGithub />
+                  </div>
+                  <div>
+                    <AiOutlineLink />
+                  </div>
+                </div>
+              </label>
+            </label>
           </div>
         )}
       </div>

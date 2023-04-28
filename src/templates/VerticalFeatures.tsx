@@ -24,6 +24,11 @@ const VerticalFeatures = () => (
           title="BizSol"
           description="A Platform for companies and experts to meet for their major issues"
           imageAlt="Second feature alt text"
+          points={[
+            "Hackathon project made during HackNITR 4.0",
+            "Made first under 36 hours and got selected top 23 over 350+ Submissions",
+            "Made using MERN Stack using Formik, Redux, Bootstrap & Next Components",
+          ]}
           links
         />
         <VerticalFeatureCard

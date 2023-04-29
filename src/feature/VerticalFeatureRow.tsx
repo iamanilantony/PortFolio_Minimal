@@ -10,6 +10,7 @@ import {
   BsLinkedin,
   BsTwitter,
 } from "react-icons/bs";
+import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { Timer } from "timer-node";
 
 type IVerticalFeatureRowProps = {
@@ -50,7 +51,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   const timer = new Timer({
     label: "test-timer",
-    startTimestamp: 1653024001233, // 2019-07-14 03:13:21.233Z
+    startTimestamp: 1653000000000, // Fri May 20 2022 04:10:40 GMT+0530
   });
 
   let value = timer.time().d;
@@ -172,22 +173,25 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
         <p className="text-sm">{props.description}</p>
         {props.links && (
           <div className="flex text-xl">
-            <label htmlFor="my-modal-4" className="btn btn-xs mt-2">
-              Read more
+            <label
+              htmlFor="my-modal-4"
+              className="btn btn-xs mt-2 text-gray-900 bg-gray-100 hover:bg-gray-200 hover:text-gray-800 dark:text-gray-50 dark:bg-gray-900"
+            >
+              <BsBoxArrowInUpRight />
             </label>
             <input type="checkbox" id="my-modal-4" className="modal-toggle" />
             <label htmlFor="my-modal-4" className="modal cursor-pointer">
-              <label className="modal-box relative" htmlFor="">
+              <label className="modal-box dark:bg-gray-800 relative" htmlFor="">
                 <h2 className="card-title">{props.title}</h2>
-                {/* <p className="text-sm my-2">{props.description}</p> */}
-                <ul className="list-disc">
-                  {props.points?.length &&
-                    props.points.map((e, key) => (
+                {props.points?.length && (
+                  <ul className="list-disc">
+                    {props.points.map((e, key) => (
                       <li key={key} className="text-xs my-2">
                         {e}
                       </li>
                     ))}
-                </ul>
+                  </ul>
+                )}
                 <div className="flex text-xl mt-4">
                   <div className="pr-2">
                     <AiFillGithub />

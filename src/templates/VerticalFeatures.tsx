@@ -29,6 +29,8 @@ const VerticalFeatures = () => (
             "Made first under 36 hours and got selected top 23 over 350+ Submissions",
             "Made using MERN Stack using Formik, Redux, Bootstrap & Next Components",
             "Competed as a soloHacker",
+            "Appreciated for best design & presentation",
+            "Competed as a soloHacker",
           ]}
           links
         />
@@ -37,11 +39,27 @@ const VerticalFeatures = () => (
           description="Loading"
           imageAlt="Second feature alt text"
           links
+          points={[
+            "Comging Soon HackNITR 4.0",
+            "Comging Soon hours and got selected top 23 over 350+ Submissions",
+            "Comging Soon using Formik, Redux, Bootstrap & Next Components",
+            "Comging Soon",
+            "Comging Soon & presentation",
+            "Comging Soon",
+          ]}
         />
         <VerticalFeatureCard
           title="Coming Soon"
           description="Loading"
           imageAlt="Second feature alt text"
+          points={[
+            "Hackathon project made during HackNITR 4.0",
+            "Made first under 36 hours and got selected top 23 over 350+ Submissions",
+            "Made using MERN Stack using Formik, Redux, Bootstrap & Next Components",
+            "Competed as a soloHacker",
+            "Appreciated for best design & presentation",
+            "Competed as a soloHacker",
+          ]}
           links
         />
       </div>

@@ -181,7 +181,10 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
             </label>
             <input type="checkbox" id="my-modal-4" className="modal-toggle" />
             <label htmlFor="my-modal-4" className="modal cursor-pointer">
-              <label className="modal-box dark:bg-gray-800 relative" htmlFor="">
+              <label
+                className="modal-box dark:bg-gray-800 bg-white relative"
+                htmlFor=""
+              >
                 <h2 className="card-title">{props.title}</h2>
                 {props.points?.length && (
                   <ul className="list-disc">

@@ -1,5 +1,5 @@
 import { Base } from "../templates/Base";
 
-const Index = () => <Base />;
+const Project = () => <Base />;
 
-export default Index;
+export default Project;

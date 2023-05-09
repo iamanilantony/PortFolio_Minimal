@@ -1,5 +1,5 @@
-import { Base } from "../templates/Base";
+import { Projects } from "../templates/Projects";
 
-const Project = () => <Base />;
+const Project = () => <Projects />;
 
 export default Project;

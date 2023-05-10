@@ -6,11 +6,12 @@ import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import {
   BsFillBriefcaseFill,
   BsGithub,
-  BsInstagram,
   BsLinkedin,
   BsTwitter,
+  BsInstagram,
 } from "react-icons/bs";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
+import { HiDocumentText } from "react-icons/hi";
 import { Timer } from "timer-node";
 
 type IVerticalFeatureRowProps = {
@@ -101,23 +102,41 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         {props.count && (
           <div className="text-md leading-1 flex items-center mt-4">
             <div className="pr-4 cursor-pointer">
-              <Link href="https://www.linkedin.com/in/iamanilantony/">
-                <BsLinkedin />
+              <Link href="https://www.linkedin.com/in/iamanilantony/" passHref>
+                <a title="LinkedIn">
+                  <BsLinkedin />
+                </a>
               </Link>
             </div>
             <div className="pr-4 cursor-pointer">
-              <Link href="https://github.com/iamanilantony">
-                <BsGithub />
+              <Link href="https://github.com/iamanilantony" passHref>
+                <a title="Github">
+                  <BsGithub />
+                </a>
               </Link>
             </div>
             <div className="pr-4 cursor-pointer">
-              <Link href="https://twitter.com/iamanilantony">
-                <BsTwitter />
+              <Link href="https://twitter.com/iamanilantony" passHref>
+                <a title="Twitter">
+                  <BsTwitter />
+                </a>
               </Link>
             </div>
             <div className="pr-4 cursor-pointer">
-              <Link href="https://instagram.com/iamanilantony">
-                <BsInstagram />
+              <Link
+                href="https://drive.google.com/file/d/1eSFa_Uhmt_k7Fpl9ma4nwOLsB2eAWdqN/view?usp=sharing"
+                passHref
+              >
+                <a title="Resume">
+                  <HiDocumentText />
+                </a>
+              </Link>
+            </div>
+            <div className="pr-4 cursor-pointer">
+              <Link href="https://instagram.com/iamanilantony" passHref>
+                <a title="Instragram">
+                  <BsInstagram />
+                </a>
               </Link>
             </div>
           </div>

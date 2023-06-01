@@ -9,7 +9,7 @@ const ProjectFeatures = () => {
         <div className="flex justify-between flex-wrap mb-2">
           <VerticalFeatureCard
             title="BizSol"
-            description="A Platform for companies and experts to meet for their major issues"
+            description="A Quora alternative where answers gets payed"
             imageAlt="Second feature alt text"
             points={[
               "Hackathon project made during HackNITR 4.0",

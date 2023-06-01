@@ -3,7 +3,11 @@ import {
   VerticalFeatureRow,
 } from "../feature/VerticalFeatureRow";
 import { Section } from "../layout/Section";
-import { BsFillBriefcaseFill } from "react-icons/bs";
+import { BsFillBriefcaseFill, BsFillBusFrontFill } from "react-icons/bs";
+// import { BiSolidCameraMovie } from "react-icons/bi";
+import { BiCameraMovie } from "react-icons/bi";
+import { TiBusinessCard } from "react-icons/ti";
+import { IoIosConstruct } from "react-icons/io";
 
 const VerticalFeatures = () => (
   <Section>
@@ -15,14 +19,14 @@ const VerticalFeatures = () => (
       imageAlt="First feature alt text"
       count
     />
-    <Section title="Projects">
+    <Section title="Projects" icon={<IoIosConstruct />}>
       <div
         className="flex justify-between flex-col md:flex-row"
         style={{ marginTop: "-1rem" }}
       >
         <VerticalFeatureCard
           title="BizSol"
-          description="A Platform for companies and experts to meet for their major issues"
+          description="A Quora alternative where answers gets payed by giving business solutions"
           imageAlt="Second feature alt text"
           points={[
             "Hackathon project made during HackNITR 4.0",
@@ -33,11 +37,15 @@ const VerticalFeatures = () => (
             "Competed as a soloHacker",
           ]}
           links
-          image="/assets/images/settlin.png"
+          // icon={<BiSolidBusiness className="text-blue-400" />}
+          icon={<TiBusinessCard className="text-blue-400" />}
+          iconColor="red"
+          stack={["React", "Express", "Bootstrap", "Redux", "Mongo", "Formik"]}
+          hover="/assets/images/Bizolv.gif"
         />
         <VerticalFeatureCard
-          title="Coming Soon"
-          description="Loading"
+          title="Track My trip"
+          description="A Product which will help you keep track of your long trips with the help of travel agencies"
           imageAlt="Second feature alt text"
           links
           points={[
@@ -48,10 +56,14 @@ const VerticalFeatures = () => (
             "Comging Soon & presentation",
             "Comging Soon",
           ]}
+          icon={<BsFillBusFrontFill className="text-red-400" />}
+          iconColor="red"
+          stack={["NextJs", "NextJs", "TRPC", "Mongo", "Typescript"]}
+          hover="/assets/images/Bizolv.gif"
         />
         <VerticalFeatureCard
-          title="Coming Soon"
-          description="Loading"
+          title="CineFest"
+          description="A platform for hosting online film festivals and more"
           imageAlt="Second feature alt text"
           links
           points={[
@@ -62,6 +74,10 @@ const VerticalFeatures = () => (
             "Comging Soon & presentation",
             "Comging Soon",
           ]}
+          icon={<BiCameraMovie className="text-green-600" />}
+          iconColor="green"
+          stack={["Next", "TRPC", "Tailwind", "Redux", "TypeScript"]}
+          hover="/assets/images/Bizolv.gif"
         />
       </div>
     </Section>
@@ -77,6 +93,7 @@ const VerticalFeatures = () => (
           imageAlt="Second feature alt text"
           image="/assets/images/settlin.png"
           padding
+          stack={["Graphql", "Meteor", "Lamda", "ReactJs", "TypeScript"]}
         />
         <VerticalFeatureCard
           title="SDE Intern"
@@ -85,6 +102,7 @@ const VerticalFeatures = () => (
           imageAlt="Second feature alt text"
           image="/assets/images/settlin.png"
           padding
+          stack={["ReactJs", "Meteor", "Node", "Redux", "MUI"]}
         />
         <VerticalFeatureCard
           title="SDE Trainee"
@@ -92,6 +110,7 @@ const VerticalFeatures = () => (
           description="Oct 2021- Sep 2022"
           imageAlt="Second feature alt text"
           image="/assets/images/ict.png"
+          stack={["Angular", "Express", "Node", "Mongo", "Bootstrap"]}
         />
       </div>
     </Section>

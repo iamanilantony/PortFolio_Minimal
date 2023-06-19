@@ -162,23 +162,25 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
 const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
   const padding = className({
-    "pl-2": props.padding,
+    // "pl-2": props.padding,
   });
 
   // const router = useRouter();
   return (
-    <div className="card w-full md:w-56 my-4 md:my-0 border-2">
+    <div className="card my-4 md:my-0 border-2 border-gray-800">
       <div className="card-body">
-        <div className="flex">
-          {props.image && (
+        {props.image && (
+          <div className="flex">
             <Image
               src={props.image}
               width="40px"
-              height="30px"
+              height="40px"
               alt="company"
               className="m-2"
             />
-          )}
+          </div>
+        )}
+        <div className="flex">
           <div className={padding}>
             <h2 className="card-title">{props.title}</h2>
             <h5 className="text-md font-normal text-gray-600">
@@ -186,7 +188,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
             </h5>
           </div>
         </div>
-        <p className="text-sm">{props.description}</p>
+        <p className="text-sm w-full md:w-56">{props.description}</p>
         {props.links && (
           <div className="flex text-xl">
             <label

@@ -1,4 +1,5 @@
 import className from "classnames";
+import { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -27,6 +28,9 @@ type IVerticalFeatureRowProps = {
   padding?: boolean;
   count?: boolean;
   points?: string[];
+  icon?: ReactNode;
+  iconColor?: string;
+  stack?: string[];
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -104,7 +108,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             <div className="pr-4 cursor-pointer">
               <Link href="https://www.linkedin.com/in/iamanilantony/" passHref>
                 <a title="LinkedIn">
-                  <BsLinkedin />
+                  <BsLinkedin className="text-blue-600" />
                 </a>
               </Link>
             </div>
@@ -118,7 +122,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             <div className="pr-4 cursor-pointer">
               <Link href="https://twitter.com/iamanilantony" passHref>
                 <a title="Twitter">
-                  <BsTwitter />
+                  <BsTwitter className="text-blue-400" />
                 </a>
               </Link>
             </div>
@@ -128,14 +132,14 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
                 passHref
               >
                 <a title="Resume">
-                  <HiDocumentText />
+                  <HiDocumentText className="text-green-600" />
                 </a>
               </Link>
             </div>
             <div className="pr-4 cursor-pointer">
               <Link href="https://instagram.com/iamanilantony" passHref>
                 <a title="Instragram">
-                  <BsInstagram />
+                  <BsInstagram className="text-orange-600" />
                 </a>
               </Link>
             </div>
@@ -164,10 +168,11 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
   const padding = className({
     // "pl-2": props.padding,
   });
-
-  // const router = useRouter();
+  const color = `text-4xl text-${
+    props.iconColor ? props.iconColor : "red"
+  }-400`;
   return (
-    <div className="card my-4 md:my-4 w-full md:w-56 border-2 border-gray-800">
+    <div className="card my-4 md:my-4 w-full md:w-56 border-2 border-gray-200 dark:border-gray-800">
       <div className="card-body">
         {props.image && (
           <div className="flex">
@@ -180,6 +185,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
             />
           </div>
         )}
+        {props.icon && <div className={`text-4xl ${color}`}>{props.icon}</div>}
         <div className="flex">
           <div className={padding}>
             <h2 className="card-title">{props.title}</h2>
@@ -225,6 +231,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
             </label>
           </div>
         )}
+        {props.stack && props.stack.map}
       </div>
     </div>
   );

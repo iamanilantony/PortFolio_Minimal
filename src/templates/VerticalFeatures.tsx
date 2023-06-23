@@ -33,6 +33,7 @@ const VerticalFeatures = () => (
             "Competed as a soloHacker",
           ]}
           links
+          image="/assets/images/settlin.png"
         />
         <VerticalFeatureCard
           title="Coming Soon"
@@ -47,20 +48,6 @@ const VerticalFeatures = () => (
             "Comging Soon & presentation",
             "Comging Soon",
           ]}
-        />
-        <VerticalFeatureCard
-          title="Coming Soon"
-          description="Loading"
-          imageAlt="Second feature alt text"
-          points={[
-            "Hackathon project made during HackNITR 4.0",
-            "Made first under 36 hours and got selected top 23 over 350+ Submissions",
-            "Made using MERN Stack using Formik, Redux, Bootstrap & Next Components",
-            "Competed as a soloHacker",
-            "Appreciated for best design & presentation",
-            "Competed as a soloHacker",
-          ]}
-          links
         />
       </div>
     </Section>
@@ -90,7 +77,7 @@ const VerticalFeatures = () => (
           subtitle="ICT Academy Kerala"
           description="Oct 2021- Sep 2022"
           imageAlt="Second feature alt text"
-          // image="/assets/images/ict.png"
+          image="/assets/images/ict.png"
         />
       </div>
     </Section>

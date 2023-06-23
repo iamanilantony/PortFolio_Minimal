@@ -1,58 +1,84 @@
 import { useTheme } from "next-themes";
-import Link from "next/link";
 import React from "react";
-// import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Navbar() {
-  // const [navbarOpen, setNavbarOpen] = React.useState(false);
   const { theme, setTheme } = useTheme();
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between py-3 mb-3">
-        <div className="container px-4 mx-auto flex items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <a
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
-              href="#pablo"
+      <div className="navbar bg-base-400">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] shadow bg-base-100 rounded-box w-52"
             >
-              <Link href="/">Home</Link>
-            </a>
-            {/* <button
-              className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            > */}
-            {/* <i className="fas fa-bars"></i> */}
-            {/* <GiHamburgerMenu /> */}
-            {/* </button> */}
-          </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center flex"
-              // (navbarOpen ? " flex" : " hidden")
-            }
-            id="example-navbar-danger"
-          >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item">
-                <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75">
-                  <i className="fab fa-pinterest text-lg leading-lg opacity-75"></i>
-                  <span className="ml-2">
-                    <input
-                      type="checkbox"
-                      className="toggle"
-                      defaultChecked
-                      onClick={() =>
-                        setTheme(theme === "dark" ? "light" : "dark")
-                      }
-                    />
-                  </span>
-                </a>
+              <li>
+                <a>Homepage</a>
+              </li>
+              <li>
+                <a>Portfolio</a>
+              </li>
+              <li>
+                <a>About</a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
+        {/* <div className="navbar-center">
+          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        </div> */}
+        <div className="navbar-end">
+          {/* <button className="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button> */}
+          <button>
+            <div className="indicator">
+              <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75">
+                <i className="fab fa-pinterest text-lg leading-lg opacity-75"></i>
+                <span className="ml-2">
+                  <input
+                    type="checkbox"
+                    className="toggle"
+                    defaultChecked
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                  />
+                </span>
+              </a>
+            </div>
+          </button>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
-const workExperience = () => {
+const WorkExperience = () => {
   return <div>workExperience</div>;
 };
 
-export default workExperience;
+export default WorkExperience;

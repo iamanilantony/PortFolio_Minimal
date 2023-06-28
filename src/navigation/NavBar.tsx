@@ -49,30 +49,6 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-        <div className={`navbar-center ${menuOpen ? "visible" : "invisible"}`}>
-          <ul
-            tabIndex={0}
-            className={`flex mt-3 z-[1] shadow bg-base-100 rounded-box p-2 cursor-pointer ${
-              menuOpen ? "invisible" : "visible"
-            }`}
-          >
-            <li className="mx-2">
-              <a>Homepage</a>
-            </li>
-            <li className="mx-2">
-              <a>Projects</a>
-            </li>
-            <li className="mx-2">
-              <a>About</a>
-            </li>
-            <li className="mx-2">
-              <a>Blogs</a>
-            </li>
-            <li className="mx-2 transition-colors duration-300 hover:bg-gray-500 hover:text--gray-800">
-              <a>Events</a>
-            </li>
-          </ul>
-        </div>
         <div className="navbar-end">
           <button>
             <div className="indicator">

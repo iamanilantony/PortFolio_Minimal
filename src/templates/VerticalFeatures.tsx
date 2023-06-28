@@ -49,6 +49,20 @@ const VerticalFeatures = () => (
             "Comging Soon",
           ]}
         />
+        <VerticalFeatureCard
+          title="Coming Soon"
+          description="Loading"
+          imageAlt="Second feature alt text"
+          links
+          points={[
+            "Comging Soon HackNITR 4.0",
+            "Comging Soon hours and got selected top 23 over 350+ Submissions",
+            "Comging Soon using Formik, Redux, Bootstrap & Next Components",
+            "Comging Soon",
+            "Comging Soon & presentation",
+            "Comging Soon",
+          ]}
+        />
       </div>
     </Section>
     <Section title="Work" icon={<BsFillBriefcaseFill />}>

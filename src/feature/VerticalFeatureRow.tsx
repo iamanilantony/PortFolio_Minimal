@@ -167,7 +167,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
 
   // const router = useRouter();
   return (
-    <div className="card my-4 md:my-0 border-2 border-gray-800">
+    <div className="card my-4 md:my-4 w-full md:w-56 border-2 border-gray-800">
       <div className="card-body">
         {props.image && (
           <div className="flex">
@@ -188,7 +188,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
             </h5>
           </div>
         </div>
-        <p className="text-sm w-full md:w-56">{props.description}</p>
+        <p className="text-sm">{props.description}</p>
         {props.links && (
           <div className="flex text-xl">
             <label

@@ -194,10 +194,10 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
         </div>
         <p className="text-sm">{props.description}</p>
         {props.stack && (
-          <div className="grid grid-cols-3 gap-2 p-0 m-0 text-gray-400">
+          <div className="grid grid-cols-3 gap-2 p-0 m-0 text-gray-800">
             {props.stack.map((e, ind) => (
               <span
-                className="text-xs border border-gray-800 mr-2 rounded-md p-1 w-max"
+                className="text-xs border border-gray-800 mr-2 rounded-md p-1 w-max dark:text-gray-400"
                 key={ind}
               >
                 <i>{e}</i>

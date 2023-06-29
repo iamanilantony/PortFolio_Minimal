@@ -166,10 +166,6 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 };
 
 const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
-  const padding = className({
-    // "pl-2": props.padding,
-  });
-  // const [isHovered, setIsHovered] = useState(false);
   const color = `text-4xl text-${
     props.iconColor ? props.iconColor : "red"
   }-400`;
@@ -189,7 +185,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
         )}
         {props.icon && <div className={`text-4xl ${color}`}>{props.icon}</div>}
         <div className="flex">
-          <div className={padding}>
+          <div>
             <h2 className="card-title">{props.title}</h2>
             <h5 className="text-md font-normal text-gray-600">
               {props.subtitle}
@@ -236,7 +232,6 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
                     />
                   </div>
                 )}
-
                 <h2 className="card-title">{props.title}</h2>
                 {props.points?.length && (
                   <ul className="list-disc">

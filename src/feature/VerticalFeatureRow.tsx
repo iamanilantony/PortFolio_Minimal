@@ -31,6 +31,7 @@ type IVerticalFeatureRowProps = {
   icon?: ReactNode;
   iconColor?: string;
   stack?: string[];
+  hover?: string;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -168,6 +169,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
   const padding = className({
     // "pl-2": props.padding,
   });
+  // const [isHovered, setIsHovered] = useState(false);
   const color = `text-4xl text-${
     props.iconColor ? props.iconColor : "red"
   }-400`;
@@ -195,13 +197,25 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
           </div>
         </div>
         <p className="text-sm">{props.description}</p>
+        {props.stack && (
+          <div className="grid grid-cols-3 gap-2 p-0 m-0 text-gray-400">
+            {props.stack.map((e, ind) => (
+              <span
+                className="text-xs border border-gray-800 mr-2 rounded-md p-1 w-max"
+                key={ind}
+              >
+                <i>{e}</i>
+              </span>
+            ))}
+          </div>
+        )}
         {props.links && (
           <div className="flex text-xl">
             <label
               htmlFor="my-modal-4"
               className="btn btn-xs mt-2 text-gray-900 bg-gray-100 hover:bg-gray-200 hover:text-gray-800 dark:text-gray-50 dark:bg-gray-900"
             >
-              <BsBoxArrowInUpRight />
+              Explore &nbsp; <BsBoxArrowInUpRight />
             </label>
             <input type="checkbox" id="my-modal-4" className="modal-toggle" />
             <label htmlFor="my-modal-4" className="modal cursor-pointer">
@@ -209,6 +223,20 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
                 className="modal-box dark:bg-gray-800 bg-white relative"
                 htmlFor=""
               >
+                {props.hover && (
+                  <div
+                    className={`group-hover:block bg-white shadow-lg rounded-lg mb-4`}
+                  >
+                    <Image
+                      src={props.hover}
+                      alt="Popup Image"
+                      className="w-64 h-44"
+                      width={1138}
+                      height={654}
+                    />
+                  </div>
+                )}
+
                 <h2 className="card-title">{props.title}</h2>
                 {props.points?.length && (
                   <ul className="list-disc">
@@ -231,7 +259,6 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
             </label>
           </div>
         )}
-        {props.stack && props.stack.map}
       </div>
     </div>
   );

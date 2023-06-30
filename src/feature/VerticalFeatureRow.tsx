@@ -9,7 +9,6 @@ import {
   BsGithub,
   BsLinkedin,
   BsTwitter,
-  BsInstagram,
 } from "react-icons/bs";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { HiDocumentText } from "react-icons/hi";
@@ -127,20 +126,13 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
                 </a>
               </Link>
             </div>
-            <div className="pr-4 cursor-pointer">
+            <div className="cursor-pointer">
               <Link
                 href="https://drive.google.com/file/d/1eSFa_Uhmt_k7Fpl9ma4nwOLsB2eAWdqN/view?usp=sharing"
                 passHref
               >
                 <a title="Resume">
                   <HiDocumentText className="text-green-600" />
-                </a>
-              </Link>
-            </div>
-            <div className="pr-4 cursor-pointer">
-              <Link href="https://instagram.com/iamanilantony" passHref>
-                <a title="Instragram">
-                  <BsInstagram className="text-orange-600" />
                 </a>
               </Link>
             </div>
@@ -170,7 +162,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
     props.iconColor ? props.iconColor : "red"
   }-400`;
   return (
-    <div className="card my-4 md:my-4 w-full md:w-56 border-2 border-gray-200 dark:border-gray-800">
+    <div className="card my-4 md:my-4 w-full md:w-60 border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 hover:translate-y-[-5px] transition duration-300">
       <div className="card-body">
         {props.image && (
           <div className="flex">
@@ -197,7 +189,7 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
           <div className="grid grid-cols-3 gap-2 p-0 m-0 text-gray-800">
             {props.stack.map((e, ind) => (
               <span
-                className="text-xs border border-gray-800 mr-2 rounded-md p-1 w-max dark:text-gray-400"
+                className="text-xs border border-gray-800 mr-2 rounded-md px-1 w-max dark:text-gray-400"
                 key={ind}
               >
                 <i>{e}</i>

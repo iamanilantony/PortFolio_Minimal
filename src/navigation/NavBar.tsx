@@ -53,7 +53,11 @@ export default function Navbar() {
           <button>
             <div className="indicator">
               <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75">
-                <i className="fab fa-pinterest text-lg leading-lg opacity-75"></i>
+                <i
+                  className={`fab fa-pinterest text-lg leading-lg opacity-75 ${
+                    theme === "dark" ? "text-white" : "text-black"
+                  }`}
+                ></i>
                 <span className="ml-2">
                   <input
                     type="checkbox"

@@ -161,93 +161,99 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
   const color = `text-4xl text-${
     props.iconColor ? props.iconColor : "red"
   }-400`;
+
   return (
-    <div className="card my-4 md:my-4 w-full md:w-60 border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 hover:translate-y-[-5px] transition duration-300">
-      <div className="card-body">
-        {props.image && (
+    <>
+      <div className="card my-4 md:my-4 w-full md:w-60 border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 hover:translate-y-[-5px] transition duration-300">
+        <div className="card-body">
+          {props.image && (
+            <div className="flex">
+              <Image
+                src={props.image}
+                width="40px"
+                height="40px"
+                alt="company"
+                className="m-2"
+              />
+            </div>
+          )}
+          {props.icon && (
+            <div className={`text-4xl ${color}`}>{props.icon}</div>
+          )}
           <div className="flex">
-            <Image
-              src={props.image}
-              width="40px"
-              height="40px"
-              alt="company"
-              className="m-2"
-            />
+            <div>
+              <h2 className="card-title">{props.title}</h2>
+              <h5 className="text-md font-normal text-gray-600">
+                {props.subtitle}
+              </h5>
+            </div>
           </div>
-        )}
-        {props.icon && <div className={`text-4xl ${color}`}>{props.icon}</div>}
-        <div className="flex">
-          <div>
-            <h2 className="card-title">{props.title}</h2>
-            <h5 className="text-md font-normal text-gray-600">
-              {props.subtitle}
-            </h5>
-          </div>
-        </div>
-        <p className="text-sm">{props.description}</p>
-        {props.stack && (
-          <div className="grid grid-cols-3 gap-2 p-0 m-0 text-gray-800">
-            {props.stack.map((e, ind) => (
-              <span
-                className="text-xs border border-gray-800 mr-2 rounded-md px-1 w-max dark:text-gray-400"
-                key={ind}
-              >
-                <i>{e}</i>
-              </span>
-            ))}
-          </div>
-        )}
-        {props.links && (
-          <div className="flex text-xl">
-            <label
-              htmlFor="my-modal-4"
-              className="btn btn-xs mt-2 text-gray-900 bg-gray-100 hover:bg-gray-200 hover:text-gray-800 dark:text-gray-50 dark:bg-gray-900"
-            >
-              Explore &nbsp; <BsBoxArrowInUpRight />
-            </label>
-            <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-            <label htmlFor="my-modal-4" className="modal cursor-pointer">
+          <p className="text-sm">{props.description}</p>
+          {props.stack && (
+            <div className="grid grid-cols-3 gap-2 p-0 m-0 text-gray-800">
+              {props.stack.map((e, ind) => (
+                <span
+                  className="text-xs border border-gray-800 mr-2 rounded-md px-1 w-max dark:text-gray-400"
+                  key={ind}
+                >
+                  <i>{e}</i>
+                </span>
+              ))}
+            </div>
+          )}
+          {props.links && (
+            <div className="flex text-xl">
               <label
-                className="modal-box dark:bg-gray-800 bg-white relative"
-                htmlFor=""
+                htmlFor="my-modal-4"
+                className="btn btn-xs mt-2 text-gray-900 bg-gray-100 hover:bg-gray-200 hover:text-gray-800 dark:text-gray-50 dark:bg-gray-900"
               >
-                {props.hover && (
-                  <div
-                    className={`group-hover:block bg-white shadow-lg rounded-lg mb-4`}
-                  >
-                    <Image
-                      src={props.hover}
-                      alt="Popup Image"
-                      className="w-64 h-44"
-                      width={1138}
-                      height={654}
-                    />
-                  </div>
-                )}
-                <h2 className="card-title">{props.title}</h2>
-                {props.points?.length && (
-                  <ul className="list-disc">
-                    {props.points.map((e, key) => (
-                      <li key={key} className="text-xs my-2">
-                        {e}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                <div className="flex text-xl mt-4">
-                  <div className="pr-2">
-                    <AiFillGithub />
-                  </div>
-                  <div>
-                    <AiOutlineLink />
-                  </div>
-                </div>
+                Explore &nbsp; <BsBoxArrowInUpRight />
               </label>
-            </label>
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+
+      <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+      <label htmlFor="my-modal-4" className="modal cursor-pointer">
+        <label
+          className="modal-box dark:bg-gray-800 bg-white relative"
+          htmlFor=""
+        >
+          <div
+            className={`group-hover:block bg-white shadow-lg rounded-lg mb-4`}
+          >
+            {props.hover && (
+              <Image
+                src={props.hover}
+                alt="Popup Image"
+                className="w-64 h-44"
+                width={1138}
+                height={654}
+              />
+            )}
+          </div>
+          <h2 className="card-title">{props.title}</h2>
+          {props.points?.length && (
+            <ul className="list-disc">
+              {props.points.map((e, key) => (
+                <li key={key} className="text-xs my-2">
+                  {e}
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="flex text-xl mt-4">
+            <div className="pr-2">
+              <AiFillGithub />
+            </div>
+            <div>
+              <AiOutlineLink />
+            </div>
+          </div>
+        </label>
+      </label>
+    </>
   );
 };
 

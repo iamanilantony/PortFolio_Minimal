@@ -26,6 +26,7 @@ const ProjectFeatures = () => {
             description="
             Revolutionizing travel agency operations with streamlined registration, planning, and itinerary tracking for customers."
             imageAlt="A platform for you "
+            comingSoon
             links
             points={[
               "Simplified registration process: Our platform simplifies the trip registration process for travelers, allowing them to sign up easily and provide necessary details.",
@@ -39,6 +40,7 @@ const ProjectFeatures = () => {
           <VerticalFeatureCard
             title="Cinefest"
             description="Comprehensive SaaS platform for seamless online film festival management."
+            comingSoon
             imageAlt="Second feature alt text"
             points={[
               "Hackathon project made during HackNITR 4.0",

@@ -31,6 +31,7 @@ type IVerticalFeatureRowProps = {
   iconColor?: string;
   stack?: string[];
   hover?: string;
+  comingSoon?: boolean;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -165,7 +166,15 @@ const VerticalFeatureCard = (props: IVerticalFeatureRowProps) => {
   return (
     <>
       <div className="card my-4 md:my-4 w-full md:w-60 border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 hover:translate-y-[-5px] transition duration-300">
-        <div className="card-body">
+        <div
+          className={`card-body ${
+            props.comingSoon ||
+            props.title?.includes("Track My trip") ||
+            props.title?.includes("Cine")
+              ? "filter blur-md"
+              : ""
+          }`}
+        >
           {props.image && (
             <div className="flex">
               <Image

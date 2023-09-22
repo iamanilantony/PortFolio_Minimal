@@ -15,6 +15,7 @@ const VerticalFeatures = () => (
       title="Anil Antony"
       // subtitle="SDE at Settlin"
       description="I strive while utilising both the logical and creative part of the brain. I feel most in my place while continuously operating in these roles as a full stack developer within a team."
+      // image="/assets/images/IMG.png"
       image="/assets/images/animoji.png"
       imageAlt="First feature alt text"
       count

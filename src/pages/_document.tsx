@@ -8,6 +8,7 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head />
+        <link rel="icon" href="/assets/images/animoji.png" />
         <body className="bg-gray-100 dark:bg-[#121212] dark:text-white">
           <Main />
           <NextScript />

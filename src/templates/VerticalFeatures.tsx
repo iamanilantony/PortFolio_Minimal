@@ -90,13 +90,13 @@ const VerticalFeatures = () => (
         <VerticalFeatureCard
           title="SDE 1"
           subtitle="Settlin"
-          description="July 2022 - present"
+          description="May 2022 - present"
           imageAlt="Second feature alt text"
           image="/assets/images/settlin.png"
           padding
           stack={["Graphql", "Meteor", "Lamda", "ReactJs", "TypeScript"]}
         />
-        <VerticalFeatureCard
+        {/* <VerticalFeatureCard
           title="SDE Intern"
           subtitle="Settlin"
           description="May 2022 - July 2022"
@@ -104,7 +104,7 @@ const VerticalFeatures = () => (
           image="/assets/images/settlin.png"
           padding
           stack={["ReactJs", "Meteor", "Node", "Redux", "MUI"]}
-        />
+        /> */}
         <VerticalFeatureCard
           title="SDE Trainee"
           subtitle="ICT Academy Kerala"
